@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "Etykiety do nicków",
+    "description": "karniak_wnosi_o_dodawanie_etykiet_do_nicków",
+    "version": "0.1",
+    "content_scripts":[
+        {
+            "matches":[
+                "https://braterstwo.eu/tforum/t/*"
+            ],
+            "js": ["storage.js", "content.js"]
+        }
+    ],
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "activeTab",
+        "storage"
+    ]
+}
